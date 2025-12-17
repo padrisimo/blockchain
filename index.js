@@ -2,7 +2,7 @@ const Blockchain = require('./src/blockchain');
 const Block = require('./src/block');
 
 async function testBlockchain() {
-    const blockchain = new Blockchain();
+    const blockchain = await new Blockchain();
     const block1 = new Block({ sender: "Alice", recipient: "Bob", amount: 50 });
     const block2 = new Block({ sender: "Bob", recipient: "Charlie", amount: 30 });
     const block3 = new Block({ sender: "Charlie", recipient: "Dave", amount: 20 });
